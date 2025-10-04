@@ -3,8 +3,7 @@ import { useContext, useEffect } from "react";
 import { MyContext } from "./Mycontext";
 import { v1 as uuidv1 } from "uuid";
 
-// Import server URL from environment
-const server = import.meta.env.VITE_SERVER_URL || "http://localhost:5000";
+import server from "./environment";
 
 function Sidebar() {
   const {
