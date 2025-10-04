@@ -3,7 +3,7 @@ import { useContext, useEffect } from "react";
 import { MyContext } from "./Mycontext";
 import {v1 as uuidv1} from "uuid";
 import server from "./environment";
-import blackLogo from "../assets/blacklogo.png";
+
 function Sidebar() {
   const { allThreads, setAllThreads, currThreadId , setNewChat,setPrompt,setReply,setThreadId,setPrevChat} = useContext(MyContext);
 
@@ -62,7 +62,7 @@ const deleteThread=async (threadId)=>{
   return (
     <section className="sidebar">
       <button onClick={createNewChat}>
-      <img src={blackLogo} alt="logo" className="logo" />
+<img src="/blacklogo.png" alt="logo" className="logo" />
         <span>
           <i className="fa-solid fa-pen-to-square"></i>
         </span>
