@@ -7,6 +7,7 @@ function Sidebar() {
 
   const getAllThreads = async () => {
     try {
+              console.log("sending req to /api/thread");
       const response = await fetch(`${server}/api/thread`);
       const res = await response.json();
       const filterData = res.map(thread => ({

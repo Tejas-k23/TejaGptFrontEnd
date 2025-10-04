@@ -21,6 +21,7 @@ function ChatWindo(){
         })
        };
        try{
+        console.log("sending req to /api/chat");
         const reply= await fetch(`${server}/api/chat`,options);
         const res= await reply.json();
         setReply(res.reply);
