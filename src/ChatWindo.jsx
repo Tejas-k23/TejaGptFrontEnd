@@ -3,6 +3,7 @@ import Chat from "./Chat.jsx";
 import { MyContext } from "./Mycontext.jsx";
 import { useContext,useState,useEffect } from "react";
 import {HashLoader} from "react-spinners";
+import server from "./environment.js";
 
 function ChatWindo(){
     const {prompt,setPrompt,reply,setReply,currThreadId,setPrevChat}=useContext(MyContext);
@@ -20,7 +21,7 @@ function ChatWindo(){
         })
        };
        try{
-        const reply= await fetch("http://localhost:8080/api/chat",options);
+        const reply= await fetch(`${server}/api/chat`,options);
         const res= await reply.json();
         setReply(res.reply);
         
