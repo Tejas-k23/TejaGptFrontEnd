@@ -23,6 +23,7 @@ function Sidebar() {
       console.log("sending req to /api/thread");
       const response = await fetch(`${server}/api/thread`);
       const res = await response.json();
+      console.log(res);
 
       const filterData = res.map((thread) => ({
         threadId: thread.threadId,
